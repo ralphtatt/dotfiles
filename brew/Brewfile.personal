@@ -1,0 +1,19 @@
+# Security
+cask "bitwarden"
+
+# Photography
+brew "exiftool"
+cask "adobe-creative-cloud"
+
+# Learning
+cask "anki"
+
+# 3D Printing
+cask "bambu-studio"
+cask "freecad"
+
+# Communication
+cask "discord"
+
+# Gaming
+cask "steam"
