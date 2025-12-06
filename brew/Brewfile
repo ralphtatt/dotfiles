@@ -11,9 +11,10 @@ brew "kubectl"
 
 # Utilities
 brew "awscli"
-brew "jq"
 brew "bat"
+brew "gnupg"
 brew "htop"
+brew "jq"
 brew "neovim"
 brew "tmux"
 cask "iterm2"

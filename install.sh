@@ -12,6 +12,7 @@ echo "2) Homebrew + packages"
 echo "3) ZSH + Oh My Zsh"
 echo "4) Symlink dotfiles"
 echo "5) SSH Key Generator"
+echo "6) GPG Key Generator"
 
 read -p "Enter number of choice: " choice
 
@@ -33,6 +34,9 @@ case $choice in
         ;;
     5)
         bash scripts/ssh-keygen.sh
+        ;;
+    6)
+        bash scripts/gpg-keygen.sh
         ;;
     # ... other cases
 esac

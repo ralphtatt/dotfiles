@@ -95,22 +95,8 @@ echo "  Private: $SSH_KEY_PATH"
 echo "  Public:  ${SSH_KEY_PATH}.pub"
 echo ""
 
-# Copy to clipboard based on OS
-if command_exists pbcopy; then
-    cat "${SSH_KEY_PATH}.pub" | pbcopy
-    success "Public key copied to clipboard (macOS)!"
-elif command_exists xclip; then
-    cat "${SSH_KEY_PATH}.pub" | xclip -selection clipboard
-    success "Public key copied to clipboard (Linux)!"
-elif command_exists xsel; then
-    cat "${SSH_KEY_PATH}.pub" | xsel --clipboard
-    success "Public key copied to clipboard (Linux)!"
-elif command_exists clip.exe; then
-    cat "${SSH_KEY_PATH}.pub" | clip.exe
-    success "Public key copied to clipboard (WSL)!"
-else
-    warning "Could not copy to clipboard automatically"
-fi
+# Copy to clipboard
+cat "${SSH_KEY_PATH}.pub" | copy_to_clipboard
 
 echo ""
 success "Done!"
