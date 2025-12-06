@@ -1,6 +1,19 @@
 # Dotfiles
 
-Environment setup that can be ran on any machine to keep it inline with a "standard".
+This repository contains a curated set of dotfiles and automation scripts to provision a consistent, reproducible development environment across machines.
+
+Key features
+
+- Install script that symlinks configuration files and installs required packages.
+- Homebrew Brewfile(s) for packages and casks.
+- Shell, editor, git, and terminal configurations kept in a single place.
+- Minimal machine-specific tweaks to keep defaults portable and easy to audit.
+
+Goals
+
+- Make new machines ready for development with a single command.
+- Keep configurations versioned and easy to customize.
+- Ensure setups are idempotent and safe to re-run.
 
 ## Quick Start
 

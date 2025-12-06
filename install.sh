@@ -11,6 +11,7 @@ echo "1) Full setup (everything)"
 echo "2) Homebrew + packages"
 echo "3) ZSH + Oh My Zsh"
 echo "4) Symlink dotfiles"
+echo "5) SSH Key Generator"
 
 read -p "Enter number of choice: " choice
 
@@ -29,6 +30,9 @@ case $choice in
         ;;
     4)
         bash scripts/symlinks.sh
+        ;;
+    5)
+        bash scripts/ssh-keygen.sh
         ;;
     # ... other cases
 esac
