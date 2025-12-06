@@ -16,6 +16,7 @@ brew "gnupg"
 brew "htop"
 brew "jq"
 brew "neovim"
+brew "ollama"
 brew "tmux"
 cask "iterm2"
 

@@ -1,5 +1,6 @@
 # Security
 cask "bitwarden"
+cask "protonvpn"
 
 # Photography
 brew "exiftool"
