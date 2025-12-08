@@ -17,7 +17,6 @@ if [[ -f "$GITCONFIG_LOCAL" ]]; then
     warning "If you want a new one please delete it first."
     info "Keeping existing configuration"
     exit 0
-    fi
 fi
 
 # Get user info

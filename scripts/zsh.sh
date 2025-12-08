@@ -9,7 +9,7 @@ info "Setting up Zsh and Oh My Zsh..."
 
 # Check if Zsh is installed
 if ! command_exists zsh; then
-    error "Zsh is not installed. Install it first via Homebrew."
+    error "Zsh is not installed."
     exit 1
 fi
 

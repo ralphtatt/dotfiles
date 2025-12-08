@@ -6,6 +6,12 @@ source "$(dirname "$0")/utils.sh"
 
 info "Setting up Homebrew..."
 
+if ! is_macos; then
+    warning "This script is intended for macOS only."
+    warning "Skipping Homebrew setup!"
+    exit 0
+fi
+
 # Check if Homebrew is installed
 if ! command -v brew &> /dev/null; then
     info "Installing Homebrew..."

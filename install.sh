@@ -8,7 +8,7 @@ source "$(dirname "$0")/scripts/utils.sh"
 # Menu-driven installation
 echo "What would you like to install?"
 echo "1) Initial setup (everything)"
-echo "2) Homebrew + packages"
+echo "2) Package manager + packages (Homebrew on macOS, APT on Linux)"
 echo "3) ZSH + Oh My Zsh"
 echo "4) Symlink dotfiles"
 echo "5) Local Git Configuration"
@@ -22,12 +22,28 @@ case $choice in
     1)
         info "Running full setup..."
         bash scripts/git-config.sh
-        bash scripts/brew.sh
+
+        if is_macos; then
+            info "Detected macOS — running Homebrew installer"
+            bash scripts/brew.sh
+        elif is_linux; then
+            info "Detected Linux — running APT installer"
+            bash scripts/apt.sh
+        else
+            warning "Unrecognized OS — skipping package installer step"
+        fi
+
         bash scripts/zsh.sh
         bash scripts/symlinks.sh
         ;;
     2)
-        bash scripts/brew.sh
+        if is_macos; then
+            bash scripts/brew.sh
+        elif is_linux; then
+            bash scripts/apt.sh
+        else
+            warning "Unrecognized OS — no package manager selected"
+        fi
         ;;
     3)
         bash scripts/zsh.sh
