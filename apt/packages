@@ -1,4 +1,6 @@
 curl
-zsh
 git
+gnupg
 neovim
+tmux
+zsh
