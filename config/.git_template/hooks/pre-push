@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+HOOK_DIR="$(cd $(dirname "${BASH_SOURCE[0]}")" && pwd)"
+. "${HOOK_DIR}/hook-utils.sh"
+
+run_tool gitleaks gitleaks detect --no-banner
+
+exit 0

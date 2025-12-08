@@ -37,6 +37,7 @@ link_file "${CONFIG_DIR}/zsh/.zshrc" ~/.zshrc
 # Git config
 info "Linking Git config..."
 link_file "${CONFIG_DIR}/git/.gitconfig" ~/.gitconfig
+link_file "${CONFIG_DIR}/.git_template" ~/.git_template
 
 # Neovim config
 info "Linking Neovim config..."

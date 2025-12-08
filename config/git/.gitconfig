@@ -20,6 +20,7 @@
 
 [init]
     defaultBranch = main
+    templateDir = ~/.git_template
 
 # Include private config (user info, signing key, etc.)
 [include]
