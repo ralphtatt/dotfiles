@@ -36,3 +36,14 @@ brew bundle dump
 ```
 
 Then they are sorted manually into each section dependant on their usefulness
+
+## Test in Docker
+
+Run the following in the project root to help test the script in an Ubuntu environment.
+
+```bash
+docker run -it --rm \
+  -v $(pwd):/mnt \
+  ubuntu:latest \
+  bash
+```
