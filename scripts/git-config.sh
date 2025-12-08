@@ -33,7 +33,6 @@ cat > "$GITCONFIG_LOCAL" << EOF
 [user]
     name = $git_name
     email = $git_email
-    # signingkey will be added by gpg-keygen.sh if you generate a GPG key
 EOF
 
 success "Created ~/.gitconfig.local"

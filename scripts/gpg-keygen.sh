@@ -10,7 +10,7 @@ echo ""
 
 # Check if GPG is installed
 if ! command_exists gpg; then
-    error "GPG is not installed. Install with: brew install gnupg"
+    error "GPG is not installed."
     exit 1
 fi
 
