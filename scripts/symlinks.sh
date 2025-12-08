@@ -17,13 +17,8 @@ link_file() {
             success "Already linked: $dest"
             return 0
         fi
-        
-        read -p "File exists: $dest. Backup? [y/N] " -n 1 -r
-        echo
-        if [[ $REPLY =~ ^[Yy]$ ]]; then
-            mv "$dest" "${dest}.backup"
-            info "Backed up to ${dest}.backup"
-        fi
+        mv "$dest" "${dest}.backup"
+        info "Backed up existing file to ${dest}.backup"
     fi
     
     ln -sf "$src" "$dest"
