@@ -36,7 +36,13 @@ export EDITOR='nvim'
 
 # Aliases
 alias vim='nvim'
-alias cat='bat'
+
+# Prefer batcat on Linux (some distros name it that), fallback to bat
+if command -v batcat >/dev/null 2>&1; then
+    alias cat='batcat'
+elif command -v bat >/dev/null 2>&1; then
+    alias cat='bat'
+fi
 
 # Custom PATH additions
 export PATH="$HOME/bin:$PATH"
