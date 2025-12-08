@@ -4,6 +4,7 @@ run_tool() {
     local tool_name="$1"
     shift
 
+    # Remaining args = command + arguments
     local enabled
     enabled="$(git config --bool "${tool_name}.enabled")"
 
