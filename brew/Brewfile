@@ -3,13 +3,16 @@ brew "go"
 brew "terraform"
 
 # Containers
+brew "ansible"
 brew "colima"
 brew "docker"
+brew "docker-compose"
 brew "helm"
 brew "k9s"
 brew "kubectl"
 
 # Utilities
+brew "asdf"
 brew "awscli"
 brew "bat"
 brew "gitleaks"
