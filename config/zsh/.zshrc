@@ -52,5 +52,3 @@ RPS1='$(kubectx_prompt_info)'
 
 # Load custom configs if they exist
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
-. /opt/homebrew/opt/asdf/libexec/asdf.sh

@@ -96,5 +96,3 @@ echo ""
 gpg --armor --export "$KEY_ID" | copy_to_clipboard
 
 echo ""
-info "Add to GitHub: https://github.com/settings/gpg/new"
-info "Add to GitLab: https://gitlab.com/-/profile/gpg_keys"

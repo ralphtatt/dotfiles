@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e  # Exit on error
+set -e # Exit on error
 
 # Source utilities
 source "$(dirname "$0")/scripts/utils.sh"
@@ -19,46 +19,45 @@ echo "7) GPG Key Generator"
 read -p "Enter number of choice: " choice
 
 case $choice in
-    1)
-        info "Running full setup..."
-        bash scripts/git-config.sh
+  1)
+    info "Running full setup..."
+    bash scripts/git-config.sh
 
-        if is_macos; then
-            info "Detected macOS — running Homebrew installer"
-            bash scripts/brew.sh
-        elif is_linux; then
-            info "Detected Linux — running APT installer"
-            bash scripts/apt.sh
-        else
-            warning "Unrecognized OS — skipping package installer step"
-        fi
+    if is_macos; then
+      info "Detected macOS — running Homebrew installer"
+      bash scripts/brew.sh
+    elif is_linux; then
+      info "Detected Linux — running APT installer"
+      bash scripts/apt.sh
+    else
+      warning "Unrecognized OS — skipping package installer step"
+    fi
 
-        bash scripts/zsh.sh
-        bash scripts/symlinks.sh
-        ;;
-    2)
-        if is_macos; then
-            bash scripts/brew.sh
-        elif is_linux; then
-            bash scripts/apt.sh
-        else
-            warning "Unrecognized OS — no package manager selected"
-        fi
-        ;;
-    3)
-        bash scripts/zsh.sh
-        ;;
-    4)
-        bash scripts/symlinks.sh
-        ;;
-    5)
-        bash scripts/git-config.sh
-        ;;
-    6)
-        bash scripts/ssh-keygen.sh
-        ;;
-    7)
-        bash scripts/gpg-keygen.sh
-        ;;
-    # ... other cases
+    bash scripts/zsh.sh
+    bash scripts/symlinks.sh
+    ;;
+  2)
+    if is_macos; then
+      bash scripts/brew.sh
+    elif is_linux; then
+      bash scripts/apt.sh
+    else
+      warning "Unrecognized OS — no package manager selected"
+    fi
+    ;;
+  3)
+    bash scripts/zsh.sh
+    ;;
+  4)
+    bash scripts/symlinks.sh
+    ;;
+  5)
+    bash scripts/git-config.sh
+    ;;
+  6)
+    bash scripts/ssh-keygen.sh
+    ;;
+  7)
+    bash scripts/gpg-keygen.sh
+    ;;
 esac
