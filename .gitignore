@@ -1,4 +1,10 @@
+# General
+*.log
+*.tmp
+*.ignore
 *.backup
 .DS_Store
 .github
+
+# Nvim
 lazy-lock.json
