@@ -1,5 +1,7 @@
 # Dotfiles
 
+[![volkswagen status](https://auchenberg.github.io/volkswagen/volkswagen_ci.svg?v=1)](https://github.com/auchenberg/volkswagen)
+
 This repository contains a curated set of dotfiles and automation scripts to provision a consistent, reproducible development environment across machines.
 
 Key features
