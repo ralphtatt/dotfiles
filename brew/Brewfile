@@ -27,4 +27,3 @@ cask "iterm2"
 # Applications
 cask "firefox"
 cask "raycast"
-cask "visual-studio-code"
