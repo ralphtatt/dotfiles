@@ -39,3 +39,7 @@ chmod -R +x ~/.git_template/hooks
 info "Linking Neovim config..."
 mkdir -p ~/.config
 link_file "${CONFIG_DIR}/nvim" ~/.config/nvim
+
+# Tmux config
+info "Linking Tmux config..."
+link_file "${CONFIG_DIR}/tmux/tmux.conf" ~/.tmux.conf
