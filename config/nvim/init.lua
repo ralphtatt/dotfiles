@@ -62,7 +62,8 @@ require('mason').setup()
 -- LSP
 vim.lsp.enable({
   'lua_ls',
-  'gopls',
+  'bashls',
+  'efm',
 })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 

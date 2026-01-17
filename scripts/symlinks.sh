@@ -9,20 +9,20 @@ CONFIG_DIR="${DOTFILES_DIR}/config"
 
 # Function to create symlink safely
 link_file() {
-    local src="$1"
-    local dest="$2"
-    
-    if [[ -e "$dest" || -L "$dest" ]]; then
-        if [[ -L "$dest" ]] && [[ "$(readlink "$dest")" == "$src" ]]; then
-            success "Already linked: $dest"
-            return 0
-        fi
-        mv "$dest" "${dest}.backup"
-        info "Backed up existing file to ${dest}.backup"
+  local src="$1"
+  local dest="$2"
+
+  if [[ -e "$dest" || -L "$dest" ]]; then
+    if [[ -L "$dest" ]] && [[ "$(readlink "$dest")" == "$src" ]]; then
+      success "Already linked: $dest"
+      return 0
     fi
-    
-    ln -sf "$src" "$dest"
-    success "Linked: $dest → $src"
+    mv "$dest" "${dest}.backup"
+    info "Backed up existing file to ${dest}.backup"
+  fi
+
+  ln -sf "$src" "$dest"
+  success "Linked: $dest → $src"
 }
 
 # Zsh config
@@ -43,3 +43,7 @@ link_file "${CONFIG_DIR}/nvim" ~/.config/nvim
 # Tmux config
 info "Linking Tmux config..."
 link_file "${CONFIG_DIR}/tmux/tmux.conf" ~/.tmux.conf
+#
+# Tmux config
+info "Linking efm config..."
+link_file "${CONFIG_DIR}/efm-langserver" ~/.config/efm-langserver

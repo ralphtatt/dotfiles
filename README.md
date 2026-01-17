@@ -44,8 +44,11 @@ Then they are sorted manually into each section dependant on their usefulness
 Run the following in the project root to help test the script in an Ubuntu environment.
 
 ```bash
-docker run -it --rm \
-  -v $(pwd):/mnt \
-  ubuntu:latest \
-  bash
+docker run -it --rm -v $(pwd):/mnt ubuntu:latest \
+  bash -c "apt-get update && apt-get install -y sudo curl git && \
+           echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
+           su - ubuntu"
 ```
+
+You will need to set a password `sudo passwd ubuntu`.
+

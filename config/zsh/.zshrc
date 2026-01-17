@@ -37,15 +37,9 @@ export EDITOR='nvim'
 alias vim='nvim'
 alias tmac="tmux new -A -s"
 
-# Prefer batcat on Linux (some distros name it that), fallback to bat
-if command -v batcat >/dev/null 2>&1; then
-    alias cat='batcat'
-elif command -v bat >/dev/null 2>&1; then
-    alias cat='bat'
-fi
-
 # Custom PATH additions
 export PATH="$HOME/bin:$PATH"
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 # Kubectx prompt info
 RPS1='$(kubectx_prompt_info)'
