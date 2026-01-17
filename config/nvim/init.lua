@@ -105,6 +105,7 @@ end
 
 vim.keymap.set('n', '<leader>f', ':Pick files<CR>')
 vim.keymap.set('n', '<leader>m', ':Pick help<CR>')
+vim.keymap.set('n', '<leader>b', ':Pick buffers<CR>')
 
 -- mini.comment
 require('mini.comment').setup()
