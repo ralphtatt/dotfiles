@@ -14,7 +14,7 @@ vim.cmd('cnoreabbrev help vert help')
 
 vim.g.mapleader = ' '
 
-vim.keymap.set('n', '<leader>r', ':write<CR> :source ~/.config/nvim/init.lua<CR> :restart<CR>')
+vim.keymap.set('n', '<leader>r', ':write<CR> :source ~/.config/nvim/init.lua<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
 
@@ -43,10 +43,14 @@ vim.opt.winborder = 'rounded'
 vim.pack.add({
   { src = 'https://github.com/stevearc/oil.nvim' },
 
+  { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
+
   { src = 'https://github.com/mason-org/mason.nvim' },
   { src = 'https://github.com/neovim/nvim-lspconfig' },
 
   { src = 'https://github.com/nvim-mini/mini.pick' },
+  { src = 'https://github.com/nvim-mini/mini.icons' },
+  { src = 'https://github.com/nvim-mini/mini.tabline' },
   { src = 'https://github.com/nvim-mini/mini.comment' },
   { src = 'https://github.com/nvim-mini/mini.diff' },
 })
@@ -57,6 +61,7 @@ require('mason').setup()
 -- LSP
 vim.lsp.enable({
   'lua_ls',
+  'gopls',
 })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
@@ -81,6 +86,15 @@ vim.opt.updatetime = 500
 require('oil').setup()
 vim.keymap.set('n', '<leader>e', ':Oil<CR>')
 
+-- Treesitter
+require('nvim-treesitter').setup({
+	ensure_installed = { 'lua', 'go', 'python', 'javascript', 'markdown' },
+	highlight = {
+		enable = true,
+	},
+})
+
+
 -- mini.pick N.B: This is done a bit differently due to the registry change
 local MiniPick = require('mini.pick')
 MiniPick.setup()
@@ -97,3 +111,10 @@ require('mini.comment').setup()
 
 -- mini.diff
 require('mini.diff').setup()
+
+-- mini.icons
+require('mini.icons').setup()
+
+-- mini.tabline
+require('mini.tabline').setup()
+
