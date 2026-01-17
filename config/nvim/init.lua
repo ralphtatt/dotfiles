@@ -6,6 +6,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.swapfile = false
 vim.opt.undofile = true
+vim.opt.scrolloff = 16
 vim.opt.wrap = false
 
 -- Stops help opening on top and instead to the right
