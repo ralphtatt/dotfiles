@@ -8,3 +8,5 @@
 
 # Nvim
 lazy-lock.json
+*nvim-pack-lock.json
+

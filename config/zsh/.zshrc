@@ -2,7 +2,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Theme
-# ZSH_THEME="robbyrussell"
 ZSH_THEME="crunch"
 
 # Plugins
@@ -36,6 +35,7 @@ export EDITOR='nvim'
 
 # Aliases
 alias vim='nvim'
+alias tmac="tmux new -A -s"
 
 # Prefer batcat on Linux (some distros name it that), fallback to bat
 if command -v batcat >/dev/null 2>&1; then
