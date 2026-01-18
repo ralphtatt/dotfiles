@@ -17,7 +17,8 @@ vim.g.mapleader = ' '
 
 vim.keymap.set('n', '<leader>r', ':write<CR> :source ~/.config/nvim/init.lua<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
-vim.keymap.set('n', '<leader>q', ':quit<CR>')
+vim.keymap.set('n', '<leader>q', ':bdelete<CR>')
+vim.keymap.set('n', '<leader>Q', ':quit<CR>')
 
 -- Style
 vim.pack.add({
