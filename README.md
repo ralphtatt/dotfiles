@@ -52,3 +52,20 @@ docker run -it --rm -v $(pwd):/mnt ubuntu:latest \
 
 You will need to set a password `sudo passwd ubuntu`.
 
+## nvim 0.12
+
+At the moment nvim is still on 0.11 where as we require the 0.12 version. This is a short manual workaround until 0.12 is released in brew.
+
+```bash
+
+# Install tools on linux
+sudo apt install build-essential
+
+cargo install bob-nvim
+
+bob install nightly
+bob use nightly
+```
+
+You will also need to add both to the PATH.
+
