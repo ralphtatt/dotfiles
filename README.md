@@ -17,6 +17,12 @@ Goals
 - Keep configurations versioned and easy to customize.
 - Ensure setups are idempotent and safe to re-run.
 
+## Requirements
+
+`curl` and `git` already need to be on the system, possibly other tools depending on the distro and such.
+
+It will also be best to have a nerd font set up in the terminal of choice.
+
 ## Quick Start
 
 ```bash
