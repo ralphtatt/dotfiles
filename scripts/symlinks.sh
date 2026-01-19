@@ -43,7 +43,13 @@ link_file "${CONFIG_DIR}/nvim" ~/.config/nvim
 # Tmux config
 info "Linking Tmux config..."
 link_file "${CONFIG_DIR}/tmux/tmux.conf" ~/.tmux.conf
-#
+
 # Tmux config
 info "Linking efm config..."
 link_file "${CONFIG_DIR}/efm-langserver" ~/.config/efm-langserver
+
+# Scripts
+info "Linking Scripts..."
+mkdir -p ~/.scripts
+link_file "${DOTFILES_DIR}/scripts" ~/.scripts
+
