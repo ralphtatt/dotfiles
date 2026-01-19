@@ -91,10 +91,15 @@ vim.keymap.set('n', '<leader>e', ':Oil<CR>')
 
 -- Treesitter
 require('nvim-treesitter').setup({
-	ensure_installed = { 'lua', 'go', 'python', 'javascript', 'markdown' },
-	highlight = {
-		enable = true,
-	},
+  ensure_installed = {
+    'go',
+    'lua',
+    'markdown',
+    'python',
+  },
+  highlight = {
+    enable = true,
+  },
 })
 
 
@@ -121,4 +126,3 @@ require('mini.icons').setup()
 
 -- mini.tabline
 require('mini.tabline').setup()
-
