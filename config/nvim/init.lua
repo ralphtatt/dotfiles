@@ -64,6 +64,7 @@ require('mason').setup()
 vim.lsp.enable({
   'lua_ls',
   'bashls',
+  'terraformls',
   'efm',
 })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
@@ -96,6 +97,7 @@ require('nvim-treesitter').setup({
     'lua',
     'markdown',
     'python',
+    'terraform',
   },
   highlight = {
     enable = true,
