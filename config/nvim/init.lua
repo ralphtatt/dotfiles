@@ -17,7 +17,16 @@ vim.g.mapleader = ' '
 
 vim.keymap.set('n', '<leader>r', ':write<CR> :source ~/.config/nvim/init.lua<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
-vim.keymap.set('n', '<leader>q', ':bdelete<CR>')
+
+-- :bdelete if multiple buffers, else :quit
+vim.keymap.set('n', '<leader>q', function()
+  local buffers = vim.fn.getbufinfo({ buflisted = 1 })
+  if #buffers > 1 then
+    vim.cmd('bdelete')
+  else
+    vim.cmd('quit')
+  end
+end)
 vim.keymap.set('n', '<leader>Q', ':quit<CR>')
 
 -- Style
