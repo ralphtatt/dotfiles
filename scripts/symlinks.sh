@@ -35,9 +35,11 @@ link_file "${CONFIG_DIR}/git/.gitconfig" ~/.gitconfig
 link_file "${CONFIG_DIR}/.git_template" ~/.git_template
 chmod -R +x ~/.git_template/hooks
 
+# We don't just link the whole config directory due to other tools using it
+mkdir -p ~/.config
+
 # Neovim config
 info "Linking Neovim config..."
-mkdir -p ~/.config
 link_file "${CONFIG_DIR}/nvim" ~/.config/nvim
 
 # Tmux config
@@ -53,7 +55,7 @@ info "Linking ripgrep config..."
 link_file "${CONFIG_DIR}/ripgrep/config" ~/.ripgrep
 
 # Scripts
-info "Linking Scripts..."
 mkdir -p ~/.scripts
+info "Linking Scripts..."
 link_file "${DOTFILES_DIR}/scripts" ~/.scripts
 
