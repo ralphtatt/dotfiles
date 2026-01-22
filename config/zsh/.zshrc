@@ -32,6 +32,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export EDITOR="nvim"
+export RIPGREP_CONFIG_PATH="$HOME/.ripgrep"
 
 # Aliases
 alias cat="bat"

@@ -48,6 +48,10 @@ link_file "${CONFIG_DIR}/tmux/tmux.conf" ~/.tmux.conf
 info "Linking efm config..."
 link_file "${CONFIG_DIR}/efm-langserver" ~/.config/efm-langserver
 
+# Ripgrep config
+info "Linking ripgrep config..."
+link_file "${CONFIG_DIR}/ripgrep/config" ~/.ripgrep
+
 # Scripts
 info "Linking Scripts..."
 mkdir -p ~/.scripts
