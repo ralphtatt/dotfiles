@@ -18,33 +18,15 @@ plugins=(
     kubectl
     kubectx
     macos
+    pre-commit
     ssh
     ssh-agent
     sudo
     terraform
     tmux
-    vscode
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-export EDITOR="nvim"
-export RIPGREP_CONFIG_PATH="$HOME/.ripgrep"
-
-# Aliases
-alias cat="bat"
-alias tmac="tmux new -A -s"
-alias vim="nvim"
-
-# Custom PATH additions
-export PATH="$HOME/bin:$PATH"
-. $(brew --prefix asdf)/libexec/asdf.sh
-
-# Kubectx prompt info
-RPS1="$(kubectx_prompt_info)"
-
-# Load custom configs if they exist
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

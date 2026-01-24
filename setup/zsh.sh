@@ -74,4 +74,30 @@ else
   success "Zsh is already the default shell"
 fi
 
+# Create .zshrc file
+ZSHRC_FILE="$HOME/.zshrc"
+
+touch $ZSHRC_FILE
+
+# The code to add
+SOURCE_CODE='
+# Source all files in ~/.config/zsh
+if [ -d ~/.config/zsh ]; then
+  for config_file in ~/.config/zsh/*; do
+    if [ -f "$config_file" ]; then
+      source "$config_file"
+    fi
+  done
+fi
+'
+
+# Check if the code is already in .zshrc
+if grep -qF "# Source all files in ~/.config/zsh" "$ZSHRC_FILE"; then
+  echo "The sourcing code is already present in $ZSHRC_FILE."
+else
+  # Append the code to .zshrc
+  echo "$SOURCE_CODE" >>"$ZSHRC_FILE"
+  echo "Sourcing code added to $ZSHRC_FILE."
+fi
+
 success "Zsh setup complete!"

@@ -26,9 +26,6 @@ link_file() {
   success "Linked: $dest → $src"
 }
 
-# Zsh config
-info "Linking Zsh config..."
-link_file "${CONFIG_DIR}/zsh/.zshrc" ~/.zshrc
 
 # Git config
 info "Linking Git config..."
@@ -38,6 +35,10 @@ chmod -R +x ~/.git_template/hooks
 
 # We don't just link the whole config directory due to other tools using it
 mkdir -p ~/.config
+
+# Zsh config
+info "Linking Zsh config..."
+link_file "${CONFIG_DIR}/zsh" ~/.config/zsh
 
 # Neovim config
 info "Linking Neovim config..."
