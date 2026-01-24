@@ -3,7 +3,7 @@ export EDITOR="nvim"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgrep"
 
 # Aliases
-alias af="alias | grep"
+alias af="alias | rg"
 alias sz="echo Sourcing .zshrc; source ~/.zshrc"
 alias cat="bat"
 alias grep="rg"
