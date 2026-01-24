@@ -30,8 +30,6 @@ link_file() {
 # Git config
 info "Linking Git config..."
 link_file "${CONFIG_DIR}/git/.gitconfig" ~/.gitconfig
-link_file "${CONFIG_DIR}/.git_template" ~/.git_template
-chmod -R +x ~/.git_template/hooks
 
 # We don't just link the whole config directory due to other tools using it
 mkdir -p ~/.config
