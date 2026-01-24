@@ -2,10 +2,11 @@
 
 set -e
 
-source "$(dirname "$0")/utils.sh"
-
+SETUP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 CONFIG_DIR="${DOTFILES_DIR}/config"
+
+source "${SETUP_DIR}/../scripts/utils.sh"
 
 # Function to create symlink safely
 link_file() {

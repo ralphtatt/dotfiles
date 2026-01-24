@@ -2,7 +2,8 @@
 
 set -e
 
-source "$(dirname "$0")/utils.sh"
+SETUP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "${SETUP_DIR}/../scripts/utils.sh"
 
 info "Setting up Homebrew..."
 

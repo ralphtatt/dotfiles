@@ -21,27 +21,27 @@ read -p "Enter number of choice: " choice
 case $choice in
 1)
   info "Running full setup..."
-  bash scripts/git-config.sh
-  bash scripts/brew.sh
-  bash scripts/zsh.sh
-  bash scripts/symlinks.sh
+  bash setup/git-config.sh
+  bash setup/brew.sh
+  bash setup/zsh.sh
+  bash setup/symlinks.sh
   ;;
 2)
-  bash scripts/brew.sh
+  bash setup/brew.sh
   ;;
 3)
-  bash scripts/zsh.sh
+  bash setup/zsh.sh
   ;;
 4)
-  bash scripts/symlinks.sh
+  bash setup/symlinks.sh
   ;;
 5)
-  bash scripts/git-config.sh
+  bash setup/git-config.sh
   ;;
 6)
-  bash scripts/ssh-keygen.sh
+  bash setup/ssh-keygen.sh
   ;;
 7)
-  bash scripts/gpg-keygen.sh
+  bash setup/gpg-keygen.sh
   ;;
 esac

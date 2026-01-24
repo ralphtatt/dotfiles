@@ -2,8 +2,8 @@
 
 set -e
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-source "${SCRIPT_DIR}/utils.sh"
+SETUP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "${SETUP_DIR}/../scripts/utils.sh"
 
 info "SSH Key Generator"
 echo ""
@@ -26,7 +26,7 @@ if [[ -z "$key_name" ]]; then
 fi
 
 # Construct full path
-SSH_KEY_PATH="${SSH_DIR}/id_ed25519_${key_name}"
+SSH_KEY_PATH="${SSH_DIR}/${key_name}"
 
 # Check if key already exists
 if [[ -f "$SSH_KEY_PATH" ]]; then
