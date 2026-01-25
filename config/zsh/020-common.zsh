@@ -14,6 +14,3 @@ alias vim="nvim"
 export PATH="$HOME/bin:$PATH"
 . $(brew --prefix asdf)/libexec/asdf.sh
 
-# Kubectx prompt info
-RPS1="$(kubectx_prompt_info)"
-
