@@ -4,6 +4,7 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgrep"
 
 # Aliases
 alias af="alias | rg"
+alias hf="history | rg"
 alias sz="echo Sourcing .zshrc; source ~/.zshrc"
 alias cat="bat"
 alias grep="rg"
