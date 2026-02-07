@@ -32,7 +32,7 @@ case "$(uname -s)" in
         open "$remote_url"
         ;;
     Linux)
-        if grep -q Microsoft /proc/version; then
+        if grep -iq Microsoft /proc/version; then
             # WSL: use cmd.exe to open the default Windows browser
             cmd.exe /c start "$remote_url"
         else
