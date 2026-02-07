@@ -15,3 +15,9 @@ git_pull_all() {
   done
 }
 
+
+# Clear kube context
+kclear() {
+  kubectl config unset current-context
+}
+
