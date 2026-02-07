@@ -38,6 +38,10 @@ mkdir -p ~/.config
 info "Linking Zsh config..."
 link_file "${CONFIG_DIR}/zsh" ~/.config/zsh
 
+# Zsh config
+info "Linking Zsh theme config..."
+link_file "${CONFIG_DIR}/zsh/rjt.zsh-theme" ~/.oh-my-zsh/themes/rjt.zsh-theme
+
 # Neovim config
 info "Linking Neovim config..."
 link_file "${CONFIG_DIR}/nvim" ~/.config/nvim

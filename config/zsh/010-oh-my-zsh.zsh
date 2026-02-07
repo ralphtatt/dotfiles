@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Theme
-ZSH_THEME="crunch"
+# Theme: this is a custom theme symlinked to ~/.oh-my-zsh/themes/rjt.zsh-theme
+ZSH_THEME="rjt"
 
 # Plugins
 # Find more here https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
