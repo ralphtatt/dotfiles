@@ -32,7 +32,7 @@ get_battery() {
 battery=$(get_battery)
 
 if [ "$battery" != "N/A" ]; then
-  echo "Bat: ${battery}% |"
+  echo "${battery}% |"
 else
   echo ""
 fi
